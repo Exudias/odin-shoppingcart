@@ -13,10 +13,16 @@
     background-color: black;
 }
 
+.logoContainer, .cartContainer {
+    flex: 1;
+}
+
 .logoContainer {
     height: 100%;
     display: flex;
     place-items: center;
+
+    min-width: 200px;
 }
 
 .cartContainer a, .logoContainer a {
@@ -41,6 +47,8 @@
     height: 100%;
     display: flex;
     place-items: center;
+
+    flex-direction: row-reverse;
 }
 
 .cart, .logo {
@@ -53,6 +61,8 @@
     flex-direction: row;
     gap: 16px;
 
+    flex: 0 1 auto;
+
     font-size: 1.5rem;
     color: white;
 }
@@ -61,8 +71,20 @@
     color: white;
 }
 
+.spacer {
+    flex: 1;
+}
+
 @media (max-width: 600px) {
     .logoContainer p {
+        display: none;
+    }
+
+    .logoContainer {
+        min-width: 64px;
+    }
+
+    .spacer {
         display: none;
     }
 }
