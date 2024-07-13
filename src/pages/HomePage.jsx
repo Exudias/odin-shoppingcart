@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet";
+import SplashImage from "../components/SplashImage";
 
 function HomePage() {
     return <>
@@ -6,7 +7,7 @@ function HomePage() {
             <title>Faux Gear | Home</title>
         </Helmet>
         <div className="page-content">
-            <h1>Home page</h1>
+            <SplashImage src="./home_splash.jpg" alt=""/>
         </div>
     </>
 }

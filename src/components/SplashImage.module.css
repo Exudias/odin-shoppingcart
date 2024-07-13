@@ -1,0 +1,12 @@
+.splashImage {
+    width: 100%;
+    height: auto;
+
+    filter: blur(3px);
+}
+
+.splashContainer {
+    width: 100%;
+    max-height: 800px;
+    overflow: hidden;
+}
