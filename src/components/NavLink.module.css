@@ -1,0 +1,19 @@
+.disabledLink {
+    pointer-events: none;
+    cursor: default;
+    color: gray;
+    text-decoration: none;
+}
+
+.enabledLink, .enabledLink:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.enabledLink:hover {
+    text-decoration: underline;
+}
+
+.enabledLink:active {
+    color: grey;
+}

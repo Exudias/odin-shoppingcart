@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from './Header.module.css';
+import NavLink from "./NavLink";
 
 function Header()
 {
@@ -12,9 +13,9 @@ function Header()
         </div>
         <div className={styles.spacer}/>
         <nav className={styles.nav}>
-            <Link to="/">Home</Link>
-            <Link to="/products">Products</Link>
-            <Link to="/about">About</Link>
+            <NavLink path="/" title="Home"/>
+            <NavLink path="/products" title="Products"/>
+            <NavLink path="/about" title="About"/>
         </nav>
         <div className={styles.spacer}/>
         <div className={styles.cartContainer}>

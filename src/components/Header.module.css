@@ -64,11 +64,6 @@
     flex: 0 1 auto;
 
     font-size: 1.5rem;
-    color: white;
-}
-
-.nav a:visited {
-    color: white;
 }
 
 .spacer {
