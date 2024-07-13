@@ -7,7 +7,7 @@ function Header()
         <div className={styles.logoContainer}>
             <Link to="/">
                 <img alt="Shop logo" src="./logo.svg" className={styles.logo}/>
-                <p>Medieval Gear</p>
+                <p>Faux Gear</p>
             </Link>
         </div>
         <nav className={styles.nav}>
