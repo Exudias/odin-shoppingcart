@@ -6,6 +6,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    gap: 8px;
 
     padding: 0 16px;
 
@@ -58,4 +59,10 @@
 
 .nav a:visited {
     color: white;
+}
+
+@media (max-width: 600px) {
+    .logoContainer p {
+        display: none;
+    }
 }
