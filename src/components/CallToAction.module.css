@@ -1,0 +1,46 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+
+    padding: 16px 16px;
+
+    background-color: rgb(35, 35, 35);
+}
+
+.preamble {
+    margin: 0;
+    text-align: center;
+}
+
+.btn {
+    width: max(128px, 30%);
+    height: 64px;
+
+    border-radius: 64px;
+    border: none;
+
+    background-color: limegreen;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    transition: background-color .1s;
+}
+
+.btn:hover {
+    background-color: green;
+}
+
+.btn:active {
+    color: grey;
+}
+
+@media (max-width: 750px)
+{
+    .btn {
+        font-size: 1.5rem;
+    }
+}

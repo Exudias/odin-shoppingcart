@@ -6,7 +6,24 @@
 }
 
 .splashContainer {
+    position: relative;
+
     width: 100%;
     max-height: 800px;
     overflow: hidden;
+}
+
+.credit {
+    position: absolute;
+    left: 50%;
+    bottom: 16px;
+    transform: translateX(-50%);
+    
+    color: black;
+    background-color: white;
+
+    padding: 8px;
+    border-radius: 16px;
+
+    text-wrap: nowrap;
 }
