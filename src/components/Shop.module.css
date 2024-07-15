@@ -24,4 +24,19 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 8px;
+}
+
+.pages * {
+    width: 64px;
+    height: 64px;
+
+    font-size: 2rem;
+
+    border-radius: 50%;
+    border: none;
+}
+
+.pages *:not(:disabled):hover {
+    background-color: grey;
 }

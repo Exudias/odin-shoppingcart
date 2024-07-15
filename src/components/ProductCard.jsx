@@ -3,10 +3,12 @@ import PropTypes from "prop-types";
 
 function ProductCard({title, description, price, image})
 {
+    const displayPrice = parseFloat(price).toFixed(2);
+
     return <div className={styles.card}>
-                <h1>{title}</h1>
+                <p className={styles.title}>{title}</p>
                 <img className={styles.img} src={image} alt=""/>
-                <h3>{price}</h3>
+                <h3>{"£" + displayPrice}</h3>
             </div>
 }
 

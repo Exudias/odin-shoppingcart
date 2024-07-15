@@ -10,7 +10,7 @@ function ProductDisplay({items, page})
     if (items.length > ITEMS_PER_PAGE)
     {
         const start = page * ITEMS_PER_PAGE;
-        itemsToDisplay = itemsToDisplay.splice(start, 6);
+        itemsToDisplay = itemsToDisplay.splice(start, ITEMS_PER_PAGE);
     }
 
     return <div className={styles.main}>

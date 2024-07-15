@@ -27,6 +27,12 @@ function Shop({items, categories})
         setPage(num);
     }
 
+    const pagesDiv = (<div className={styles.pages}>
+                {elementsArray.map((val) => 
+                    <button key={val} onClick={() => handlePageChange(val)} disabled={page === val}>{val + 1}</button>
+                )}
+            </div>);
+
     return <div className={styles.container}>
         <select className={styles.select} onChange={handleCategoryChange}>
             <option value="all">All</option>
@@ -34,14 +40,9 @@ function Shop({items, categories})
                 <option key={idx} value={v}>{capitaliseWord(v)}</option>
             )}
         </select>
+        {pages > 1 && pagesDiv}
         <ProductDisplay items={itemsToShow} page={page}/>
-        {pages > 1 && 
-            <div className={styles.pages}>
-                {elementsArray.map((val) => 
-                    <button key={val} onClick={() => handlePageChange(val)} disabled={page === val}>{val + 1}</button>
-                )}
-            </div>
-        }
+        {pages > 1 && pagesDiv}
     </div>
 }
 
