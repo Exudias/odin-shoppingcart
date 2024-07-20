@@ -1,0 +1,33 @@
+.main {
+    height: 100vh;
+    width: 600px;
+
+    position: fixed;
+    z-index: 99999;
+    right: 0;
+    top: 0;
+
+    background-color: white;
+    color: black;
+
+    transition: transform 0.2s;
+
+    overflow-y: auto;
+}
+
+.enabled {
+    transform: translateX(0);
+}
+
+.disabled {
+    transform: translateX(100%);
+}
+
+.close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+
+    width: 32px;
+    height: 32px;
+}

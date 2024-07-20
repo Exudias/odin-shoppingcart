@@ -29,8 +29,9 @@
     min-width: 200px;
 }
 
-.cartContainer a, .logoContainer a {
+.cartContainer img, .logoContainer a {
     height: 60%;
+    cursor: pointer;
 }
 
 .logoContainer a {
