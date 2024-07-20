@@ -36,8 +36,6 @@ function ProductCard({title, description, price, image, id})
         const itemIdx = newCart.findIndex((e) => e.id === id);
         const itemInCart = itemIdx >= 0;
 
-        console.log(newCart[itemIdx]);
-
         if (itemInCart)
         {
             newCart[itemIdx] = { ...newCart[itemIdx], amount: newCart[itemIdx].amount + amt};
@@ -49,8 +47,6 @@ function ProductCard({title, description, price, image, id})
 
         setCart(newCart);
     }
-
-    console.log(cart);
 
     return <div className={styles.card}>
                 <p className={styles.title}>{title}</p>
