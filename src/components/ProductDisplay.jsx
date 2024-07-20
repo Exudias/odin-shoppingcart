@@ -15,7 +15,7 @@ function ProductDisplay({items, page})
 
     return <div className={styles.main}>
         {itemsToDisplay.map((item) =>
-            <ProductCard key={item.id} title={item.title} description={item.description} price={item.price} image={item.image}/>
+            <ProductCard key={item.id} id={item.id} title={item.title} description={item.description} price={item.price} image={item.image}/>
         )}
     </div>
 }

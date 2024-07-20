@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import styles from "./ProductCard.module.css";
 import PropTypes from "prop-types";
+import { CartContext } from "./CartProvider";
 
-function ProductCard({title, description, price, image})
+function ProductCard({title, description, price, image, id})
 {
-    const [amt, setAmt] = useState(0);
+    const [cart, setCart] = useContext(CartContext);
+    const [amt, setAmt] = useState(1);
 
     const displayPrice = parseFloat(price).toFixed(2);
 
@@ -28,6 +30,28 @@ function ProductCard({title, description, price, image})
         setAmt(val);
     }
 
+    function addToCart()
+    {
+        let newCart = [...cart];
+        const itemIdx = newCart.findIndex((e) => e.id === id);
+        const itemInCart = itemIdx >= 0;
+
+        console.log(newCart[itemIdx]);
+
+        if (itemInCart)
+        {
+            newCart[itemIdx] = { ...newCart[itemIdx], amount: newCart[itemIdx].amount + amt};
+        }
+        else
+        {
+            newCart.push({id, title, description, price, image, amount: amt});
+        }
+
+        setCart(newCart);
+    }
+
+    console.log(cart);
+
     return <div className={styles.card}>
                 <p className={styles.title}>{title}</p>
                 <img className={styles.img} src={image} alt=""/>
@@ -37,7 +61,7 @@ function ProductCard({title, description, price, image})
                         <button className={styles.adjustBtn} onClick={() => updateAmount(-1)}>-</button>
                         <input type="number" className={styles.buyAmount} value={amt} onChange={handleAmountChange} min={0}/>
                         <button className={styles.adjustBtn} onClick={() => updateAmount(1)}>+</button>
-                        <button className={styles.buyBtn}>Add to cart</button>
+                        <button className={styles.buyBtn} onClick={addToCart}>Add to cart</button>
                     </div>
                 </div>
             </div>
@@ -48,6 +72,7 @@ ProductCard.propTypes = {
     description: PropTypes.string,
     price: PropTypes.number,
     image: PropTypes.string,
+    id: PropTypes.number,
 }
 
 export default ProductCard;
