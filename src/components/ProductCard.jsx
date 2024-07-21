@@ -23,9 +23,9 @@ function ProductCard({title, description, price, image, id})
 
     function changeAmountTo(val)
     {
-        if (val < 0) val = 0;
+        if (val < 1) val = 1;
         if (val > 99) val = 99;
-        if (!val) val = 0;
+        if (!val) val = 1;
 
         setAmt(val);
     }
@@ -55,7 +55,7 @@ function ProductCard({title, description, price, image, id})
                     <p>{"£" + displayPrice}</p>
                     <div className={styles.buyControls}>
                         <button className={styles.adjustBtn} onClick={() => updateAmount(-1)}>-</button>
-                        <input type="number" className={styles.buyAmount} value={amt} onChange={handleAmountChange} min={0}/>
+                        <input type="number" className={styles.buyAmount} value={amt} onChange={handleAmountChange} min={1}/>
                         <button className={styles.adjustBtn} onClick={() => updateAmount(1)}>+</button>
                         <button className={styles.buyBtn} onClick={addToCart}>Add to cart</button>
                     </div>

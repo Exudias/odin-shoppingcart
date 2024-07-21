@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { CartContext } from "./CartProvider";
 import styles from "./CartDisplay.module.css";
 import PropTypes from "prop-types";
+import CartProductDisplay from "./CartProductDisplay";
 
 function CartDisplay({on, toggle})
 {
@@ -14,7 +15,7 @@ function CartDisplay({on, toggle})
 
     function getItemsInCart(cart)
     {
-        return cart.reduce((acc, curr) => acc + curr.amount, 0);
+        return cart.reduce((acc, curr) => +acc + +curr.amount, 0);
     }
 
     return (
@@ -22,7 +23,7 @@ function CartDisplay({on, toggle})
         <button onClick={toggle} className={styles.close}>X</button>
         <h1>Cart ({getItemsInCart(cart)})</h1>
         {cart.map((e) => 
-            <h1 key={e.id}>{e.title}</h1>
+            <CartProductDisplay key={e.id} id={e.id} title={e.title} amount={e.amount} price={e.price} image={e.image}/>
         )}
         <h1>Total: {"£" + parseFloat(calculateCostFromCart(cart)).toFixed(2)}</h1>
     </div>);
