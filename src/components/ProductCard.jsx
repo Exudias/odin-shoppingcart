@@ -10,6 +10,8 @@ function ProductCard({title, description, price, image, id})
 
     const displayPrice = parseFloat(price).toFixed(2);
 
+    const inCart = isInCart();
+
     function handleAmountChange(e)
     {
         let val = e.target.value;
@@ -30,14 +32,19 @@ function ProductCard({title, description, price, image, id})
         setAmt(val);
     }
 
+    function isInCart()
+    {
+        const itemIdx = cart.findIndex((e) => e.id === id);
+        return itemIdx >= 0;
+    }
+
     function addToCart()
     {
         let newCart = [...cart];
-        const itemIdx = newCart.findIndex((e) => e.id === id);
-        const itemInCart = itemIdx >= 0;
 
-        if (itemInCart)
+        if (inCart)
         {
+            const itemIdx = newCart.findIndex((e) => e.id === id);
             newCart[itemIdx] = { ...newCart[itemIdx], amount: newCart[itemIdx].amount + amt};
         }
         else
@@ -57,7 +64,7 @@ function ProductCard({title, description, price, image, id})
                         <button className={styles.adjustBtn} onClick={() => updateAmount(-1)}>-</button>
                         <input type="number" className={styles.buyAmount} value={amt} onChange={handleAmountChange} min={1}/>
                         <button className={styles.adjustBtn} onClick={() => updateAmount(1)}>+</button>
-                        <button className={styles.buyBtn} onClick={addToCart}>Add to cart</button>
+                        <button className={styles.buyBtn} onClick={addToCart}>{inCart ? "Add more" : "Add to cart"}</button>
                     </div>
                 </div>
             </div>
