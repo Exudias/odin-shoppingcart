@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet";
 import SplashImage from "../components/SplashImage";
 import ScrollingText from "../components/ScrollingText";
 import CallToAction from "../components/CallToAction";
@@ -16,10 +15,9 @@ function HomePage() {
         navigate("./products");
     }
 
+    document.title = "Faux Gear | Home";
+
     return <>
-        <Helmet>
-            <title>Faux Gear | Home</title>
-        </Helmet>
         <div className="page-content">
             <SplashImage src="./home_splash.jpg" alt="" credit="Photo by Godisable Jacob" creditLink="https://www.pexels.com/photo/woman-in-pink-and-white-floral-jacket-and-pants-sitting-on-hood-of-car-886404/"/>
             <ScrollingText text={scrollingText}/>

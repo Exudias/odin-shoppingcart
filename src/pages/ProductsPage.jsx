@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet";
 import Shop from "../components/Shop";
 import { useEffect, useState } from "react";
 
@@ -18,10 +17,9 @@ function ProductsPage() {
             .then(json=>setCategories(json))
     }, []);
 
+    document.title = "Faux Gear | Products";
+
     return <>
-        <Helmet>
-            <title>Faux Gear | Products</title>
-        </Helmet>
         <div className="page-content">
             <Shop items={items} categories={categories}/>
         </div>
