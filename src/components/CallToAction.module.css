@@ -6,7 +6,8 @@
 
     padding: 16px 16px;
 
-    background-color: rgb(35, 35, 35);
+    background-color: var(--color-background);
+    color: var(--color-text-alt);
 }
 
 .preamble {
@@ -21,17 +22,19 @@
     border-radius: 64px;
     border: none;
 
-    background-color: limegreen;
-    color: white;
+    background-color: var(--color-foreground);
+    color: var(--color-text);
     font-size: 3rem;
     font-weight: bold;
     text-transform: uppercase;
 
     transition: background-color .1s;
+
+    cursor: pointer;
 }
 
 .btn:hover {
-    background-color: green;
+    background-color: var(--color-mid);
 }
 
 .btn:active {

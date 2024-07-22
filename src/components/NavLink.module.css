@@ -1,12 +1,12 @@
 .disabledLink {
     pointer-events: none;
     cursor: default;
-    color: gray;
+    color: var(--color-mid);
     text-decoration: none;
 }
 
 .enabledLink, .enabledLink:visited {
-    color: white;
+    color: var(--color-text);
     text-decoration: none;
 }
 
@@ -15,5 +15,5 @@
 }
 
 .enabledLink:active {
-    color: grey;
+    color: var(--color-mid);
 }

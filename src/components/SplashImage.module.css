@@ -19,8 +19,8 @@
     bottom: 16px;
     transform: translateX(-50%);
     
-    color: black;
-    background-color: white;
+    color: var(--color-text-alt);
+    background-color: var(--color-background);
 
     padding: 8px;
     border-radius: 16px;
