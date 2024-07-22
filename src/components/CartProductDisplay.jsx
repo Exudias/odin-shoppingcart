@@ -1,4 +1,4 @@
-import styles from "./CartProductDisplay.module.css";
+import styles from "../styles/CartProductDisplay.module.css";
 import PropTypes from "prop-types";
 import { useContext } from "react";
 import { CartContext } from "./CartProvider";
@@ -58,6 +58,7 @@ CartProductDisplay.propTypes = {
     amount: PropTypes.number,
     price: PropTypes.number,
     image: PropTypes.string,
+    id: PropTypes.number,
 }
 
 export default CartProductDisplay;

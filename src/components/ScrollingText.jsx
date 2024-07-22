@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import styles from './ScrollingText.module.css';
+import styles from '../styles/ScrollingText.module.css';
 
 function ScrollingText({text})
 {

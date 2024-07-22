@@ -1,4 +1,4 @@
-import styles from "./CallToAction.module.css";
+import styles from "../styles/CallToAction.module.css";
 import PropTypes from "prop-types";
 
 function CallToAction({preamble, buttonText, handleClick}) 

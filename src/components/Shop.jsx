@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ProductDisplay from "./ProductDisplay";
-import styles from "./Shop.module.css";
+import styles from "../styles/Shop.module.css";
 import PropTypes from "prop-types";
 import { capitaliseWord } from "../utils/capitaliseWord";
 import { ITEMS_PER_PAGE } from "../constants";

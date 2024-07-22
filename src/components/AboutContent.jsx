@@ -1,4 +1,4 @@
-import styles from "./AboutContent.module.css";
+import styles from "../styles/AboutContent.module.css";
 
 function AboutContent()
 {

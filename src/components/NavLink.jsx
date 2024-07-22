@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import PropTypes from 'prop-types';
-import styles from "./NavLink.module.css";
+import styles from "../styles/NavLink.module.css";
 
 function NavLink({path, title})
 {

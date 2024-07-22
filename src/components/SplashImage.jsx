@@ -1,4 +1,4 @@
-import styles from "./SplashImage.module.css";
+import styles from "../styles/SplashImage.module.css";
 import PropTypes from 'prop-types';
 
 function SplashImage({src, alt, credit, creditLink})

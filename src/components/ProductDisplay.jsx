@@ -1,4 +1,4 @@
-import styles from "./ProductDisplay.module.css";
+import styles from "../styles/ProductDisplay.module.css";
 import PropTypes from "prop-types";
 
 import { ITEMS_PER_PAGE } from "../constants";

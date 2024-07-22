@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { CartContext } from "./CartProvider";
-import styles from "./CartDisplay.module.css";
+import styles from "../styles/CartDisplay.module.css";
 import PropTypes from "prop-types";
 import CartProductDisplay from "./CartProductDisplay";
 
