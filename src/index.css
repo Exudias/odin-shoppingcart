@@ -43,6 +43,8 @@ body {
   flex-direction: column;
   overflow: hidden;
 
+  padding-top: 64px;
+
   background-color: var(--color-mid);
   color: var(--color-text);
 }
