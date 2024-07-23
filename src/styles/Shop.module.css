@@ -41,12 +41,14 @@
 }
 
 .pages * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     width: 64px;
     height: 64px;
 
     font-size: 2rem;
-    text-align: center;
-    text-align: -webkit-center;
 
     border-radius: 50%;
     border: none;
