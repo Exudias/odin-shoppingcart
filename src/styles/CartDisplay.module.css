@@ -35,6 +35,13 @@
 
     width: 32px;
     height: 32px;
+
+    cursor: pointer;
+
+    background-color: var(--color-foreground);
+    color: var(--color-text);
+
+    border: none;
 }
 
 .title, .products, .total {

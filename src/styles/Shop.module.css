@@ -27,6 +27,8 @@
     border: none;
 
     padding: 4px;
+
+    cursor: pointer;
 }
 
 .pages {
@@ -58,6 +60,7 @@
 
 .pages *:not(:disabled):hover {
     color: var(--color-mid);
+    cursor: pointer;
 }
 
 @media (max-width: 600px) {
