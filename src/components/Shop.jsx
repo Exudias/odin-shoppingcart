@@ -20,11 +20,13 @@ function Shop({items, categories})
     {
         setPage(0);
         setCategory(e.target.value);
+        window.scrollTo(0, 0);
     }
 
     function handlePageChange(num)
     {
         setPage(num);
+        window.scrollTo(0, 0);
     }
 
     const pagesDiv = (<div className={styles.pages}>
