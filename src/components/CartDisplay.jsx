@@ -1,11 +1,15 @@
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import { CartContext } from "./CartProvider";
 import styles from "../styles/CartDisplay.module.css";
 import PropTypes from "prop-types";
 import CartProductDisplay from "./CartProductDisplay";
+import useClickOutside from "../utils/useClickOutside";
 
 function CartDisplay({on, toggle})
 {
+    const ref = useRef();
+    useClickOutside(ref, () => on && toggle());
+
     const [cart] = useContext(CartContext);
     
     function calculateCostFromCart(cart)
@@ -19,7 +23,7 @@ function CartDisplay({on, toggle})
     }
 
     return (
-    <div className={`${styles.main} ${on ? styles.enabled : styles.disabled}`}>
+    <div ref={ref} className={`${styles.main} ${on ? styles.enabled : styles.disabled}`}>
         <button onClick={toggle} className={styles.close}>X</button>
         <h1>Cart ({getItemsInCart(cart)})</h1>
         {cart.map((e) => 
