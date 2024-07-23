@@ -37,9 +37,9 @@ function Shop({items, categories})
 
     return <div className={styles.container}>
         <select className={styles.select} onChange={handleCategoryChange}>
-            <option value="all">All</option>
+            <option value="all">All ({items.length})</option>
             {categories.map((v, idx) => 
-                <option key={idx} value={v}>{capitaliseWord(v)}</option>
+                <option key={idx} value={v}>{`${capitaliseWord(v)} (${items.filter((item) => item.category === v).length})`}</option>
             )}
         </select>
         {pages > 1 && pagesDiv}

@@ -46,6 +46,7 @@
 
     font-size: 2rem;
     text-align: center;
+    text-align: -webkit-center;
 
     border-radius: 50%;
     border: none;
