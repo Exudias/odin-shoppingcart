@@ -52,6 +52,8 @@
 }
 
 .cartContainer {
+    position: relative;
+
     height: 100%;
     display: flex;
     place-items: center;
@@ -76,6 +78,23 @@
 
 .spacer {
     flex: 1;
+}
+
+.cartCounter {
+    position: absolute;
+    bottom: 4px;
+    right: 24px;
+
+    width: 24px;
+    height: 24px;
+
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    font-weight: lighter;
+
+    color: var(--color-text-alt);
+    background-color: var(--color-background);
 }
 
 @media (max-width: 600px) {
