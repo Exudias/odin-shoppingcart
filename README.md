@@ -1,8 +1,9 @@
-# React + Vite
+# Faux Gear
+A mock online shop using FakeStore API to populate with products and ReactJS for the front end.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live link: [Netlify](https://fauxgear.netlify.app/)
 
-Currently, two official plugins are available:
+![fauxgear_home](https://github.com/user-attachments/assets/9ab971e9-18ee-4d85-a795-2f77f48f907a)
+![fauxgear_productswithcart](https://github.com/user-attachments/assets/c1f1fa0b-36a0-4530-8b27-cf8c171a82d1)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Live link: [Netlify](https://fauxgear.netlify.app/)
