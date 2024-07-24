@@ -1,27 +1,15 @@
 import Shop from "../components/Shop";
-import { useEffect, useState } from "react";
 
 function ProductsPage() {
-    const [items, setItems] = useState([]);
-    const [categories, setCategories] = useState([]);
-    
-    useEffect(() => {
-        fetch('https://fakestoreapi.com/products')
-            .then(res=>res.json())
-            .then(json=>setItems(json))
-    }, []);
-
-    useEffect(() => {
-        fetch('https://fakestoreapi.com/products/categories')
-            .then(res=>res.json())
-            .then(json=>setCategories(json))
-    }, []);
-
     document.title = "Faux Gear | Products";
 
+    const items = JSON.parse(localStorage.getItem("items"));
+    const categories = JSON.parse(localStorage.getItem("categories"));
+    
     return <>
         <div className="page-content">
-            <Shop items={items} categories={categories}/>
+            {items && categories && <Shop items={items} categories={categories} /> || 
+            <h1 style={{textAlign: "center"}}>Loading...</h1>}
         </div>
     </>
 }

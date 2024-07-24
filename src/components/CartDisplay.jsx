@@ -27,9 +27,9 @@ function CartDisplay({on, toggle})
         <button onClick={toggle} className={styles.close}>X</button>
         <div className={styles.title}>Cart ({getItemsInCart(cart)})</div>
         <div className={styles.products}>
-            {cart.map((e) => 
+            {cart.length > 0 ? cart.map((e) => 
             <CartProductDisplay key={e.id} id={e.id} title={e.title} amount={e.amount} price={e.price} image={e.image}/>
-            )}
+            ) : <h1 style={{textAlign: "center"}}>Cart empty</h1>}
         </div>
         <div className={styles.total}>Total: {"£" + parseFloat(calculateCostFromCart(cart)).toFixed(2)}</div>
     </div>);
