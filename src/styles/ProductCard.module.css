@@ -88,11 +88,11 @@
     transition: transform 0.2s;
 }
 
-.buyControls button:hover {
+.buyControls button:not(:disabled):hover {
     transform: scale(1.05);
 }
 
-.buyControls button:active {
+.buyControls button:not(:disabled):active {
     transform: scale(0.95);
 }
 
@@ -102,4 +102,11 @@
     font-size: .8rem;
 
     padding: 8px;
+}
+
+.buyBtn:disabled, .adjustBtn:disabled {
+    background-color: var(--color-mid);
+    border-color: var(--color-mid);
+    color: var(--color-foreground);
+    cursor: default;
 }

@@ -44,9 +44,9 @@ function CartProductDisplay({title, amount, price, image, id})
             <p>{title}</p>
             <p>{displayPrice}</p>
             <div className={styles.buyControls}>
-                <button className={styles.adjustBtn} onClick={() => editAmountInCart(amount-1)}>-</button>
+                <button className={styles.adjustBtn} onClick={() => editAmountInCart(amount-1)} disabled={+amount === 1}>-</button>
                 <input type="number" className={styles.buyAmount} value={amount} onChange={handleAmountChange} min={1}/>
-                <button className={styles.adjustBtn} onClick={() => editAmountInCart(amount+1)}>+</button>
+                <button className={styles.adjustBtn} onClick={() => editAmountInCart(amount+1)} disabled={+amount === 99}>+</button>
             </div>
         </div>
         <div className={styles.delBtn} onClick={deleteItemFromCart}>X</div>

@@ -55,16 +55,19 @@ function ProductCard({title, description, price, image, id})
         setCart(newCart);
     }
 
+    console.log(+amt === 1);
+    console.log(amt);
+
     return <div className={styles.card}>
                 <p className={styles.title}>{title}</p>
                 <img className={styles.img} src={image} alt=""/>
                 <div className={styles.buy}>
                     <p>{"£" + displayPrice}</p>
                     <div className={styles.buyControls}>
-                        <button className={styles.adjustBtn} onClick={() => updateAmount(-1)}>-</button>
-                        <input type="number" className={styles.buyAmount} value={amt} onChange={handleAmountChange} min={1}/>
-                        <button className={styles.adjustBtn} onClick={() => updateAmount(1)}>+</button>
-                        <button className={styles.buyBtn} onClick={addToCart}>{inCart ? "Add more" : "Add to cart"}</button>
+                        <button className={styles.adjustBtn} onClick={() => updateAmount(-1)} disabled={inCart || +amt === 1}>-</button>
+                        <input type="number" className={styles.buyAmount} value={amt} onChange={handleAmountChange} min={1} readOnly={inCart}/>
+                        <button className={styles.adjustBtn} onClick={() => updateAmount(1)} disabled={inCart || +amt === 99}>+</button>
+                        <button className={styles.buyBtn} onClick={addToCart} disabled={inCart}>{inCart ? "In cart" : "Add to cart"}</button>
                     </div>
                 </div>
             </div>
